@@ -1,0 +1,4 @@
+1) Ques 1 (a), (b) - practical guidelines 
+
+
+2) From book - Ch - 6 - Topic - A Stack class - Understand and Implement the given program

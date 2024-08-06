@@ -1,0 +1,23 @@
+import  java.util.Scanner;
+
+class CircleComputation
+{
+	public static void main(String[] args)
+	{
+	    double radius,dia,circum,area;
+	    Scanner in = new Scanner(System.in);
+
+	    System.out.print("Enter the radius of circle: ");
+	    radius=in.nextDouble();
+	    
+	   dia=2*radius;
+	   circum=2*Math.PI*radius;
+	   area=Math.PI*radius*radius;
+
+	   System.out.println("The diameter is: " + dia);
+	   System.out.println("The circumference is: " + circum);
+	   System.out.println("The area is: " + area);
+
+	  in.close();
+                 }
+}
