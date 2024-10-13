@@ -1,0 +1,156 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+class Calculator implements ActionListener {
+
+    JLabel jlab;
+    JTextField tf= new JTextField(16);
+    int num1 = 0, num2 = 0, result = 0;
+    char operation;
+    Panel panel = new Panel();
+
+    public Calculator() {
+
+        //panel1 for textfield and panel2 for buttons and operations
+
+        JPanel panel1 = new JPanel(new BorderLayout());
+        panel1.add(tf);
+
+        //rows = 4, columns = 4, horizontal and vertical space left between components, horz = 5, ver = 5
+        JPanel panel2 = new JPanel(new GridLayout(4, 4, 5, 5));
+        
+        JFrame jfrm = new JFrame("Calculator");
+        jfrm.getContentPane().setBackground(Color.lightGray);
+        jfrm.setLayout(new FlowLayout()); //flow layout positions components left to right, top to bottom
+        jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jfrm.setSize(250, 230);
+
+        jlab = new JLabel("CALCULATOR");
+        jfrm.add(jlab);
+        
+        jfrm.add(panel1, BorderLayout.NORTH);
+
+        //creating buttons
+        JButton jbtn7 = new JButton("7");
+        JButton jbtn8 = new JButton("8");
+        JButton jbtn9 = new JButton("9");
+        JButton jbtnAdd = new JButton("+");
+        JButton jbtn4 = new JButton("4");
+        JButton jbtn5 = new JButton("5");
+        JButton jbtn6 = new JButton("6");
+        JButton jbtnSub = new JButton("-");
+        JButton jbtn1 = new JButton("1");
+        JButton jbtn2 = new JButton("2");
+        JButton jbtn3 = new JButton("3");
+        JButton jbtnMul = new JButton("*");
+        JButton jbtnC = new JButton("C");
+        JButton jbtn0 = new JButton("0");
+        JButton jbtnResult = new JButton("=");
+        JButton jbtnDiv = new JButton("/");
+
+        //adding action listeners
+        jbtn7.addActionListener(this);  
+        jbtn8.addActionListener(this);  
+        jbtn9.addActionListener(this);  
+        jbtnAdd.addActionListener(this);  
+        jbtn4.addActionListener(this);  
+        jbtn5.addActionListener(this);  
+        jbtn6.addActionListener(this);  
+        jbtnSub.addActionListener(this);  
+        jbtn1.addActionListener(this);  
+        jbtn2.addActionListener(this);  
+        jbtn3.addActionListener(this);  
+        jbtnMul.addActionListener(this);  
+        jbtnC.addActionListener(this);  
+        jbtn0.addActionListener(this); 
+        jbtnResult.addActionListener(this);  
+        jbtnDiv.addActionListener(this); 
+
+        //adding buttons to the pannel
+        panel2.add(jbtn7);
+        panel2.add(jbtn8);
+        panel2.add(jbtn9);
+        panel2.add(jbtnAdd);
+        panel2.add(jbtn4);
+        panel2.add(jbtn5);
+        panel2.add(jbtn6);
+        panel2.add(jbtnSub);
+        panel2.add(jbtn1);
+        panel2.add(jbtn2);
+        panel2.add(jbtn3);
+        panel2.add(jbtnMul);
+        panel2.add(jbtn0);
+        panel2.add(jbtnC);
+        panel2.add(jbtnResult);
+        panel2.add(jbtnDiv);
+        
+        jfrm.add(panel2);
+        jfrm.setVisible(true);
+    
+    }
+    
+    public void actionPerformed(ActionEvent ae) {
+        
+        String str = ae.getActionCommand();
+
+        if (str.equals("+")) {
+            operation = '+';
+            //to obtain the string currently contained in the textfield and then convert it to integer
+            num1 = Integer.parseInt(tf.getText()); 
+            tf.setText("");
+        } 
+        else if (str.equals("-")) {
+            operation = '-';
+            num1 = Integer.parseInt(tf.getText());
+            tf.setText("");
+        } 
+        else if (str.equals("*")) {
+            operation = '*';
+            num1 = Integer.parseInt(tf.getText());
+            tf.setText("");
+        } 
+        else if (str.equals("/")) {
+            operation = '/';
+            num1 = Integer.parseInt(tf.getText());
+            tf.setText("");
+        } 
+        else if (str.equals("=")) {
+
+            num2 = Integer.parseInt(tf.getText());
+
+            switch(operation) {
+
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num1 / num2;
+                    break;
+            }
+            tf.setText(result + "");
+            result = 0;
+        } 
+        else if (str.equals("C")) {
+
+            tf.setText("");
+            num1 = num2 = result = 0;
+        } 
+        else {
+            tf.setText(tf.getText() + str);
+        }
+    }
+
+    public static void main(String args[]) {
+
+        Calculator obj =  new Calculator();
+    }
+    
+}
+

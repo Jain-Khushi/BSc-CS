@@ -1,0 +1,37 @@
+[
+    {
+        "name":"akamaru",
+        "age":8,
+        "weight":32,
+        "type":"ninja",
+        "likes":"ninjutsu, fighting"
+    },
+    {
+        "name":"chopper",
+        "age":12,
+        "weight":22,
+        "type":"reindeer",
+        "likes":"cotton candy, fighting"
+    },
+    {
+        "name":"Neko",
+        "age":2.5,
+        "weight":8,
+        "type":"cat",
+        "likes":"sleeping"
+    },
+    {
+        "name":"Tom",
+        "age":0.5,
+        "weight":0.7,
+        "type":"Mouse",
+        "likes":"running, eating cheese"
+    },
+    {
+        "name":"Chiku",
+        "age":1,
+        "weight":1.2,
+        "type":"Rabbit",
+        "likes":"running, eating carrot"
+    }
+]

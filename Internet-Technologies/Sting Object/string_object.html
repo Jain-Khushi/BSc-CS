@@ -1,0 +1,50 @@
+<html>
+   <head>
+      <title>JavaScript String </title>
+   </head>
+   
+   <body>
+   
+      <script type="text/javascript">
+         var str = new String( "This is string one and again string");
+
+	document.write("We are working on the string --- " + str);
+
+         document.write("<br><br>str.length is:" + str.length); 
+ 
+         document.writeln(" <br><br><br> str.charAt(0) is:" + str.charAt(0)); 
+         
+	document.write("<br><br>substring(5): "      + str.substring(5));
+
+	document.write("<br>substring(1,3): "    + str.substring(1,2));
+
+	document.write(" <br><br> Lowercase  " + str.toLowerCase( ));
+
+	document.write(" <br> Uppercase   "+ str.toUpperCase( ));
+
+	var index = str.indexOf( "string" );
+         
+	document.write("<br><br>indexOf found String :" + index );
+
+	var index = str.lastIndexOf( "string" );
+         document.write("<br>lastIndexOf found String :" + index );
+
+	 var splitted = str.split(" ", 3); 
+         document.write( " <br><br>string split  " + splitted );
+	var splitted = str.split(" ", 5);
+	document.write( " <br>string split  " + splitted );
+
+	var str = new String("Hello world");
+	document.write("<br><br> Big tag "+ str.big());
+	document.write("<br> Blink tag "+ str.blink());
+	document.write("<br> Bold tag "+ str.bold());
+	document.write("<br> Italics tag "+ str.italics());
+	document.write("<br> Small tag "+ str.small());
+
+	document.write(" <br><br> Fontcolor " + str.fontcolor( "red" ));  
+	document.write(" <br><br> Fontsize 1 " + str.fontsize(1));  
+	document.write(" <br><br> Fontsize 7 " + str.fontsize(7));  
+    </script>
+      
+   </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<head>
+<title> Creating Objects using Literal Notation </title>
+<script> 
+
+var person1 = {
+  name: 'Jim',
+  DOB: 1997,
+  age: function() {
+    return 2022 - this.DOB;
+  }
+}
+
+document.write(person1['name'] + "<br>");
+document.write(person1['age']()  + "<br>");
+document.write(person1['name'] + ' is ' + person1['age']() + ' years old.');
+
+</script>
+</head>
+</html>

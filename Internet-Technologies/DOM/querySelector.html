@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<style>
+div {
+  border: 1px solid black;
+  padding: 16px;
+}
+</style>
+
+<body>
+<h1>The Element Object</h1>
+<h2>The getElementsByClassName() Method</h2>
+
+<div id="myDIV">
+  <p class="child">I am a paragraph.</p>
+  <p class="child">I am a paragraph.</p>
+  <p class="child">I am a paragraph.</p>
+</div>
+
+<p>Click "Change" to change the size of the second paragraph with class="child":</p>
+
+<button onClick="myFunction()">Change</button>
+
+<script>
+function myFunction() {
+  const element = document.getElementById("myDIV");
+  element.getElementsByClassName("child")[1].style.fontSize = "24px";
+}
+</script>
+
+</body>
+</html>

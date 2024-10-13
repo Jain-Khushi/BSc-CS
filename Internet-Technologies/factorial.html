@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+    
+</head>
+<body>
+    <fieldset>
+        <legend>Program to find factorial of a number</legend>
+    <form>
+        <br>
+        Enter n : <input id="n" type="number"  name="num" >
+        <br><br>
+        
+        <input type="button" onClick="findFact()" value="Find Factorial">
+    </form>
+    </fieldset>
+    <script>
+        function findFact(){
+            var number=document.getElementById("n").value;   
+            if (number < 0) {
+                alert("Error! Factorial for negative number does not exist.");
+            }
+            else if (number == 0) {
+                alert("The factorial of 0 is 1.");
+            }
+            else {
+                fact = 1;
+                for (i = 1; i <= number; i++) {
+                    fact *= i;
+                }
+                alert("The factorial of " + number + " is " + fact );
+            }
+        }
+        </script>
+</body>
+</html>

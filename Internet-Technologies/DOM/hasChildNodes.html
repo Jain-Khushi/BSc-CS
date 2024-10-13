@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Element Object</h1>
+<h2>The hasChildNodes() Method</h2>
+
+<ul id="myList">
+  <li>Coffee</li>
+  <li>Tea</li>
+</ul>
+
+<p>Click the button to remove the child nodes from the list, one by one:</p>
+<button onclick="myFunction()">Try it</button>
+
+<p><strong>Note:</strong> Whitespace between nodes is considered text nodes.
+Some of the child nodes you remove are invisible white space or line feeds.</p>
+
+<script>
+function myFunction() {
+  const element = document.getElementById("myList");
+  
+  if (element.hasChildNodes()) {
+    element.removeChild(element.childNodes[0]);
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+<head>
+<script type="text/javascript">
+function demo()
+{
+var result= "";
+
+if (document.f1.language[0].checked)
+result= result + document.f1.language[0].value + "," ;
+if (document.f1.language[1].checked)
+result= result + document.f1.language[1].value + "," ;
+if (document.f1.language[2].checked)
+result= result + document.f1.language[2].value + "," ;
+if (document.f1.language[3].checked)
+result= result + document.f1.language[3].value + "," ;
+if (document.f1.language[4].checked)
+result= result + document.f1.language[4].value + "," ;
+if (document.f1.language[5].checked)
+result= result + document.f1.language[5].value + "," ;
+if (document.f1.language[6].checked)
+result= result + document.f1.language[6].value + "," ;
+
+document.f1.t2.value=result;
+}
+</script>
+</head>
+
+<body>
+<form name="f1">
+<fieldset>
+<legend> Sample Form </legend>
+<br>
+Name <br>
+<input type="text" name="t1"/> <br>
+<br> Programming Languages <br>
+<input type="checkbox" name="language"  value="C" /> C <br> 
+<input type="checkbox" name="language"  value="C++" /> C++ <br> 
+<input type="checkbox" name="language"  value="Java" /> Java <br>
+<input type="checkbox" name="language"  value="JavaScript" /> JavaScript <br>
+<input type="checkbox" name="language"  value="Prolog" /> Prolog <br>
+<input type="checkbox" name="language"  value="Python" /> Python <br>
+<input type="checkbox" name="language"  value="R" /> R <br> <br>
+<input type="button" name="s1" value="Show Selection" onclick="demo()"/> 
+<br><br>
+I know the following languages: <br> 
+<input type="text" name="t2" size="100"/> <br> <br>
+
+</fieldset> 
+</form>
+</body>
+</html>

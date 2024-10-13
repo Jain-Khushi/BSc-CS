@@ -1,0 +1,17 @@
+<html>
+<head>
+<title> Creating Objects using Literal Notation </title>
+<script> 
+
+var person1 = {
+  name: 'Jim',
+  DOB: 1997,
+  age: function() {
+    return 2022 - this.DOB;
+  }
+}
+
+document.write("Hello, I'm " + person1.name + " and I'm " + person1.age() + " years old.");
+</script>
+</head>
+</html>

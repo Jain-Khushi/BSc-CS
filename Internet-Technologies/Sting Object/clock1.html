@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    
+    <script>
+        function displayDate(){
+            const d=new Date();
+            let hours=d.getHours();
+            let min=d.getMinutes();
+            let sec=d.getSeconds();
+            if(min<10){
+                min="0"+min;
+            }
+            if(sec<10){
+                sec="0"+sec;
+            }
+            var am_pm=hours>=12?'PM':'AM';
+            document.getElementById("result").innerHTML=hours+":"+min+":"+sec+am_pm;
+            let t=setTimeout(function(){
+                displayDate()
+            },1000);
+        }
+        displayDate();
+    </script>
+    
+</body>
+</html>

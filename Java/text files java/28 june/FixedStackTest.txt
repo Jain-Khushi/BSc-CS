@@ -1,0 +1,110 @@
+// under flow exception class
+class UnderFlow extends Exception{
+
+UnderFlow(String s)
+{
+super(s);
+}
+
+}
+
+// over flow exception class
+class OverFlow extends Exception{
+
+OverFlow(String s)
+{
+super(s);
+}
+
+}
+
+
+
+// FixedStack implementing IntStack
+
+class FixedStack implements IntStack
+{
+
+    private int stck[];
+
+    private int tos;
+
+
+    FixedStack(int size)
+   {
+
+    stck = new int[size];
+
+    tos = -1;
+
+   }
+
+// push method
+
+   public void push(int item)
+ {
+
+      //try catch block
+
+     try
+    {
+      if(tos==stck.length-1)
+      throw new OverFlow("Stack is Over Flow");
+    }
+
+     catch(OverFlow o)
+   {
+    
+       System.out.println(o);
+       
+       System.exit(0);
+   }
+
+   stck[++tos]=item;
+  }
+
+
+//pop method
+
+     public int pop()
+   {
+   
+     try
+   {
+         if(tos<0)
+
+        throw new UnderFlow("Stack is Under Flow");
+   }
+
+    catch(UnderFlow u)
+   {
+
+     System.out.println(u);
+
+     System.exit(0);
+   }
+
+     return stck[tos--];
+   }
+}
+
+
+class FixedStackTest
+{
+
+   public static void main(String args[])
+  {
+  
+     IntStack mystack;//declaring interface refrence variable
+
+ 
+     FixedStack fs = new FixedStack(8);
+    
+     
+      mystack = fs;
+     for(int i=0;i<8;i++)  
+     mystack.push(i);
+
+     mystack.push(7);  //this will cause overflow error
+   }
+}

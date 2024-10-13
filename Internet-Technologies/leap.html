@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check leap year</title>
+</head>
+<body>
+    
+    <form name="f1">
+        <fieldset>
+            Enter Date : <input type="date" id="t1" placeholder="dd/mm/yyyy"><br><br>
+            <button id="btn" onclick="check() ;return false;">Check</button><br><br>
+            <input type="text" name="t2" />
+        </fieldset>
+    </form>
+
+    <script>
+        function check(){
+            // if(document.f1.t1.value==""){
+            //     alert("no value");
+            // }
+            var d = document.getElementById("t1").value;
+            if(d==""){
+                var today=new Date();
+                var year=today.getFullYear();
+                document.f1.t2.value=year;
+                
+                document.f1.t2.value=(checkYear(year) ? "Leap Year" : "Not a Leap Year");
+            }
+            else{
+                // var d=document.f1.t1.value;
+                var date=new Date(d);
+                // document.write(date);
+                var year=date.getFullYear();
+                // document.write(year);
+                document.f1.t2.value=(checkYear(year) ? "Leap Year" : "Not a Leap Year");
+            }
+        }
+        function checkYear( year) {
+                // If a year is multiple of 400,
+                // then it is a leap year
+                if (year % 400 == 0)
+                    return true;
+         
+                // Else If a year is multiple of 100,
+                // then it is not a leap year
+                if (year % 100 == 0)
+                    return false;
+         
+                // Else If a year is multiple of 4,
+                // then it is a leap year
+                if (year % 4 == 0)
+                    return true;
+                return false;
+            
+            }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+</head>
+<body>
+    <fieldset>
+        <legend>Login Form</legend>
+        <form>
+            <br>
+            Email : <input type="email" name="email" id="email" ><br><br>
+            Password : <input type="password" name="pass" id="pass"><br><br>
+            <input type="button" onclick="login()" value="Login">
+        </form>
+    </fieldset>
+    <script>
+        var count=0;
+        function login(){
+            
+            if(document.getElementById("email").value=="" || document.getElementById("pass").value=="")
+                alert("Either email or password field is empty");
+            else if(document.getElementById("email").value== "admin@gmail.com" && document.getElementById("pass").value== "admin123")
+                alert("Welcome !");
+            
+            count = count + 1;
+            console.log("Count is " + count);
+            if(count == 3){
+                alert("Unsuccessful login !");
+                console.log("count is" + count);
+            }
+        }
+    </script>
+</body>
+</html>

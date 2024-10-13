@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grid.css">
+    
+</head>
+<body>
+<h1>Grid Elements</h1>
+<p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eius qui aliquid placeat sapiente eum rerum ea similique accusamus corporis ad ipsa, inventore labore. Perferendis temporibus suscipit neque corrupti deserunt? At officiis, maxime, illo magni ratione, mollitia reprehenderit temporibus quia cupiditate ab a dolores in pariatur totam doloremque. At id voluptates error porro, eius consequuntur iure eos tempore nulla molestias? A quibusdam velit quo itaque! Sit nobis cumque corrupti explicabo. Voluptas fugit aliquam consequuntur quidem mollitia eaque, commodi magnam. Odit labore totam temporibus aliquid libero ad voluptas ipsam esse. Ipsum facilis exercitationem assumenda. Sequi veniam vel eum, blanditiis id quis.</p>
+
+<div class="grid-container">
+  <div class="grid-item">
+    <button id="btn" onclick="color('red')">RED</button>
+  </div>
+  <div class="grid-item">
+    <button id="btn" onclick="color('green')">GREEN</button>
+  </div>
+  <div class="grid-item">
+    <button  id="btn" onclick="color('blue')">BLUE</button>
+  </div>  
+  <div class="grid-item">
+    <button  id="btn" onclick="size('10px')">10</button>
+  </div>
+  <div class="grid-item">
+    <button  id="btn" onclick="size('20px')">20</button>
+  </div>
+  <div class="grid-item">
+    <button  id="btn" onclick="size('30px')">30</button>
+  </div>  
+  <div class="grid-item">
+    <button  id="btn" onclick="font('Courier New, Courier, monospace')">Courier New, Courier, monospace</button>
+  </div>
+  <div class="grid-item">
+    <button  id="btn" onclick="font('Verdana, Geneva, Tahoma, sans-serif')">Verdana, Geneva, Tahoma, sans-serif</button>
+  </div>
+  <div class="grid-item">
+    <button  id="btn" onclick="font('Impact, Haettenschweiler,Arial Narrow Bold, sans-serif')">Impact, Haettenschweiler,Arial Narrow Bold, sans-serif</button>
+  </div>  
+</div>
+
+<script>
+  function color(col){
+    document.getElementById('p1').style.color=col;
+  }
+  function size(s){
+    // var cont = document.getElementById('p1');
+    document.getElementById('p1').style.fontSize=s;
+  }
+  function font(f){
+    document.getElementById('p1').style.fontFamily=f;
+  }
+  
+</script>
+</body>
+</html>

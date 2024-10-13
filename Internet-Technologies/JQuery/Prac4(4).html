@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                $( "p" ).before( "Content" );
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <h3>Inserts some HTML before all paragraphs using JQuery.</h3>
+    <p>PHP Tutorial</p>
+    <p>Python Tutorial</p>
+    <p>Java Tutorial</p>
+    <button id="button1">Click to see the effect</button>
+</body>
+</html>

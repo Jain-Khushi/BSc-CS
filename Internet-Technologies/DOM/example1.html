@@ -1,0 +1,38 @@
+<html>
+<head>
+<script type="text/javascript">
+function cal()
+{
+var r=document.f1.t1.value;
+var n=document.f1.calculate.value;
+if (n == "area")
+{
+var result;
+result=3.14*r*r;
+document.f1.t2.value=result;
+}
+else if (n == "circumference")
+{
+var result;
+result=2*3.14*r;
+document.f1.t2.value=result;
+}
+else
+alert("Please select a radio button");
+}
+</script>
+</head>
+<body>
+<form name="f1">
+<fieldset>
+<legend> Sample Form </legend>
+Enter Radius:  <input type="text" name="t1" /> 
+<br> <br>
+<input type="radio" name="calculate"  value="area" /> Area of Circle <br> 
+<input type="radio" name="calculate" value="circumference" /> Circumference of Circle <br> <br>
+Result  <input type="text" name="t2" /> <br> <br>
+<input type="button" name="s1" value="Calculate" onclick="cal()"/> 
+</fieldset> 
+</form>
+</body>
+</html>

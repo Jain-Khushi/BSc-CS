@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<style>
+div {
+  border: 1px solid black;
+  padding: 16px;
+}
+</style>
+
+<body>
+<h1>The Element Object</h1>
+<h2>The getElementsByTagName() Method</h2>
+
+<p>Click "Change" to change the second p element in "myDIV".</p>
+<p><button onClick="myFunction()">Change</button></p>
+
+<div id="myDIV">
+  <p>I am a paragraph.</p>
+  <p>I am a paragraph.</p>
+  <p>I am a paragraph.</p>
+</div>
+
+<script>
+function myFunction() {
+  const element = document.getElementById("myDIV");
+  element.getElementsByTagName("p")[1].style.fontSize = "24px";
+}
+</script>
+
+</body>
+</html>

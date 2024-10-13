@@ -1,0 +1,7 @@
+age >=15
+age <=65
+
+if( salary<25000) grade=="B"
+
+increment<salary
+department %in% c("Manufacturing","Sales")

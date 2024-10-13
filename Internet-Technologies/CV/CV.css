@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* styling for body */
+body{
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 100px;
+    background: white;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.container .left{
+    position: relative;
+    background: #003147;
+    padding: 40px;
+}
+
+/* styling for main profile */
+.profiletext{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+.profiletext .imgbox{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profiletext .imgbox photo{
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.profiletext h2{
+    color: white;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profiletext h2 span{
+    font-size: 0.7em;
+    font-weight: 300;
+}
+
+/* styling for contact */
+.contact{
+    padding-top: 40px;
+}
+.title{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px ;
+    margin-bottom: 20px;
+}
+.contact ul .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+.contact ul span{
+    color: white;
+    font-weight: 200;
+}
+
+/* styling for awards */
+.awards{
+    padding-top: 40px;
+}
+.awards ul li{
+    color: white;
+    font-weight: 200;
+}
+.awards ul li span{
+    color: #03a9f4;
+}
+
+/* styling for skills */
+.skills{
+    padding-top: 40px;
+}
+.skills ul li{
+    color: white;
+    font-weight: 200;
+}
+
+/* styling for others */
+.other{
+    padding-top: 40px;
+}
+.other ul li{
+    color: white;
+    font-weight: 200;
+}
+
+/* styling for language */
+.language{
+    padding-top: 40px;
+}
+.language ul li{
+    color: white;
+    font-weight: 200;
+}
+.language ul li .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: black;
+    display: block;
+    margin-top: 5px;
+}
+.language ul li .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #03a9f4;
+}
+
+.container .right{
+    position: relative;
+    background: white;
+    padding: 40px;
+}
+.title2{
+    color: #003147;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px ;
+    margin-bottom: 20px;
+}
+/* styling for education */
+table,tr,th,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding:5px;
+    margin-top: 10px;
+    font-weight: 200;
+    color:black;
+}
+th{
+    background-color: #2a7da2;
+    color: white;
+}
+
+/* styling for experience */
+.experience{
+    padding-top: 40px;
+}
+.experience .box .text{
+    color: black;
+}
+.experience .box{
+    display: flex;
+    flex-direction: row ;
+    margin: 20px 0;
+}
+.experience .box .year{
+    min-width: 150px;
+}
+.experience .box .year h5{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+.experience .box .text h4{
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 16px;
+}
+
+/* styling for position */
+.position{
+    padding-top: 30px;
+}
+.position .box .text p{
+    color: black;
+}
+.position .box{
+    display: flex;
+    flex-direction: row ;
+    margin: 20px 0;
+}
+.position .box .role{
+    min-width: 230px;
+}
+.position .box .role h5{
+    text-transform: uppercase;
+    color: #848c90;
+    
+}
+.position .box .role h4{
+    text-transform: uppercase;
+    color: #2a7da2;
+}
+
+/* styling for projects */
+.project{
+    padding-top: 30px;
+}
+.project .ul .li{
+    color: black;
+}
+@media (max-width: 1000px){
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media (max-width:600px){
+    .experience .box{
+        flex-direction: column;
+    }
+    .experience .box .year{
+       
+        margin-bottom: 5px;
+    }
+}
+
+
+
+

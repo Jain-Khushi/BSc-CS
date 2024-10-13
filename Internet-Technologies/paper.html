@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 3</title>
+    
+</head>
+<body>
+    <fieldset>
+    <form name="f1">
+        Enter the number : <input type="text" name="number"><br><br>
+        Double<input type="radio" id="double" name= "operation" value="Double">
+        Square<input type="radio" id="square" name= "operation" value="Square"><br><br>
+        <input type="button" name="s1" value="calculate" onclick="cal()"/> <br><br>
+        Result : <input type="text" name="result">
+    </form>
+    </fieldset>
+
+    <script>
+        function cal(){
+            var res;
+            var r=document.f1.number.value;
+            // var n=document.f1.operation.length;
+            var n=document.f1.operation.value;
+            if(n=="Double"){
+                res = 2*r;
+            }
+            else if(n=="Square"){
+                res = r*r;
+            }
+            else
+            alert("You must select a radio button" );
+
+            document.f1.result.value = res;
+            // var i;
+            // for (i=0; i<n; i++)
+            // {
+            // if (document.f1.operation[i].checked)
+            // break;
+            // }
+            // if (i==0)
+            // document.f1.result.value=2*r;
+            // else if (i==1)
+            // document.f1.result.value=r*r;
+            // else
+            // alert("You must select a radio button" );
+        }
+
+    </script>
+</body>
+</html>

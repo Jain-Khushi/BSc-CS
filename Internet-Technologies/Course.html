@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Practical 8</title>
+    <style type="text/css">
+        .container {
+            width: 70%;
+            margin: auto;
+            align-items: center;
+            background-color: aqua;
+            padding-bottom:10px;
+        }
+
+        .info-table {
+            width: 80%;
+            margin: auto;
+            border: 3px solid black;
+            border-collapse: collapse;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+
+        .table-row {
+            width: 100%;
+            margin: auto;
+        }
+
+        .table-data {
+            width: 50%;
+            border: 2px solid white;
+            border-collapse: collapse;
+        }
+    </style>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btn-style').click(function () {
+                $("div").addClass('container');
+                $("table").addClass('info-table');
+                $("tr").addClass('table-row');
+                $("td").addClass('table-data');
+                $(".heading").css({
+                    "textAlign": 'center',
+                    "color":'red'
+                });
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1 class="heading">BSc (Hons.) Computer Science</h1>
+        <table>
+            <tr>
+                <td>Fee</td>
+                <td>50000(vary from university to university)</td>
+            </tr>
+            <tr>
+                <td>Eligibility Criteria</td>
+                <td>Higher Secondary Certificate (10+2) qualification with a minimum aggregate score of 45%</td>
+            </tr>
+            <tr>
+                <td>Subjects and credit scores</td>
+                <td>
+                    <table>
+                        <tr>
+                            <th>Core Subjects</th>
+                            <th>Credit score</th>
+                        </tr>
+                        <tr>
+                            <td>Programming Fundamentals using C++</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Computer System Architecture</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Programming in Java</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Discrete Structure</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Data Structures</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Operating System</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Computer Networks</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Design and Analysis of Algorithms</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Software Engineering</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Database Management Systems</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Internet Technologies</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Theory of Computation</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Artificial Intelligence</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Computer Graphics</td>
+                            <td>4</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Future Opportunities</td>
+                <td>
+                    <ol>
+                        <li>Software Developer</li>
+                        <li>Junior Android Developer</li>
+                        <li>Analyst</li>
+                        <li>Product Manager</li>
+                    </ol>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <button id="btn-style">
+        Style Page
+    </button>
+
+
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+age,department,salary,increment,grade
+28,manufacturing,50000,60000,A
+21,sales,20000,5000,A
+35,management,65000,6500,A
+22,sales,14000,20000,B
+70,manufacturing,44000,20000,A

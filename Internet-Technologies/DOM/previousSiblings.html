@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+function f()
+{
+var text = document.getElementById("item2").previousSibling.innerHTML; 
+document.getElementById("demo").innerHTML = text;
+}
+</script>
+</head>
+<body>
+<h1>The Element Object</h1>
+<h2>The previousSibling Property</h2>
+
+<ul><li id="item1">Coffee (first item)</li><li id="item2">Tea (second item)</li></ul>
+
+<p>The HTML content of the previous sibling of the second list item is:</p>
+
+<input type="submit" value="Get Answer" onClick="f(); return false;">
+
+<p id="demo"></p>
+
+<p><strong>Note:</strong> Whitespace between elements is considered text nodes.</p>
+<p>If you add whitespace between the two li elements, the result will be "undefined".</p>
+
+</body>
+</html>

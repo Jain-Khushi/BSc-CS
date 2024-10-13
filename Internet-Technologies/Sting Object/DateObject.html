@@ -1,0 +1,46 @@
+<html>
+   <head>
+      <title>JavaScript Date Object</title>
+   </head>
+   
+   <body>
+   
+      <script type="text/javascript">
+         var dt = new Date();
+         document.write(" <br><br> Date() is :   " + dt + "<br>"); 
+         
+	 var dt = new Date(5000);
+         document.write(" <br> Date(5000) is :    " + dt + "<br>");
+       	
+	var dt = new Date("August 15, 2017 09:00:00");
+	document.write(" <br> Date with string  is : " + dt + "<br>");   
+
+         var dt = new Date(2017,08,16);
+         document.write(" <br> Date(2017,08,17) is : " + dt+ "<br>"); 
+
+	var dt = new Date();
+	document.write(" <br><br> Working on :   " + dt); 
+	document.write("<br> getDate() : " + dt.getDate() ); 
+
+	var dt = new Date( "Aug 04, 2017 23:30:00" );
+	document.write(" <br><br> Date( Aug 04, 2017 23:30:00 ) is :   " + dt); 
+	dt.setDate( 24 );
+	document.write( "<br> setDate( 24 ):  " + dt );
+
+	var dt = new Date();
+	document.write(" <br><br> Working on :   " + dt); 
+	document.write("<br>getHours() : " + dt.getHours() ); 
+	dt.setHours( 02 );
+        document.write("<br> setHours(02) : " + dt); 
+ 
+	var dt = new Date();
+	document.write(" <br><br> Working on :   " + dt); 
+	document.write("<br> getTime() : " + dt.getTime() ); 
+	dt.setTime( 5 );
+        document.write("<br> setTime(5) : " + dt); 
+
+     </script>
+      
+   </body>
+</html>
+

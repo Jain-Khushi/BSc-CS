@@ -1,0 +1,27 @@
+<html>
+<body>
+
+<h3>A demonstration of how to access a SELECT element</h3>
+
+<select id="mySelect" size="2">
+  <option>JavaScript</option>
+  <option>Java</option>
+  <option>JSP</option>
+  <option>JDBC</option>
+</select>
+
+<p>Click the button to get the number of option elements found in a drop-down list.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("mySelect").length;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>
