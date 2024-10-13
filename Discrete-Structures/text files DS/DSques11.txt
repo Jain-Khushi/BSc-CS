@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int factorial(int n)
+{
+    if (n == 0)
+        return 1;
+    return n * factorial(n - 1);
+}
+
+int permutations(int n, int r)
+{
+    int p = 0;
+
+    int n_fact = factorial(n);
+    int n_r_fact = factorial(n - r);
+
+    p = n_fact / n_r_fact;
+    return p;
+}
+
+int combinations(int n, int r)
+{
+    int c = 0;
+
+    int n_fact = factorial(n);
+    int n_r_fact = factorial(n - r);
+    int r_fact = factorial(r);
+
+    c = n_fact / (n_r_fact * r_fact);
+    return c;
+}
+
+int main()
+{
+    int n, r, choice;
+    cout << "Enter the value of n : ";
+    cin >> n;
+    cout << "Enter the value of r : ";
+    cin >> r;
+    
+    cout << "Permutations = " << permutations(n, r)<<endl;
+    cout << "Combinations = " << combinations(n, r)<<endl;
+    
+    return 0;
+}

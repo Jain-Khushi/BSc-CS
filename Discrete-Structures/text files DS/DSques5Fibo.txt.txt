@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+void recursion(int n)
+{
+    static int a=0,b=1,next;
+    if(n>0)
+    {
+        next=(a+b);
+        a=b;
+        b=next;
+        cout<<next<<" ";
+        recursion(n-1);
+    }
+}
+int main()
+{
+    int a=0,b=1,n,i;
+    cout<<"\nEnter the number of elements you want in the Fibonacci series: ";
+    cin>>n;
+    cout<<"\nFibonacci Series :\n\n";
+    cout<<"0 1 ";
+    recursion(n-2);
+    return 0;
+}
+
+

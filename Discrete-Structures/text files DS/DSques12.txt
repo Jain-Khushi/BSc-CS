@@ -1,0 +1,101 @@
+#include <iostream>
+using namespace std;
+
+int sum_of_digits(int number)
+{
+    int sum = 0, digit;
+
+    while (number != 0)
+    {
+        digit = number % 10;
+        number = number / 10;
+        sum += digit;
+    }
+    return sum;
+}
+
+void print_digits(int number)
+{
+    int digit;
+    while (number != 0)
+    {
+        digit = number % 10;
+        number = number / 10;
+        cout << digit << " ";
+    }
+    cout << endl;
+    return;
+}
+
+void set(long &num, long &max, int n);
+
+int main()
+{
+    int n, c;
+    long max = 0, num = 0;
+
+    cout << "Enter the value of n (n <= 9): ";
+    cin >> n;
+    cout << "Enter the value of the constant C (C<=10) : ";
+    cin >> c;
+
+    set(num, max, n);
+    cout << "--- Solutions ---" << endl;
+    while (num != max)
+    {
+        if (sum_of_digits(num) == c)
+            print_digits(num);
+
+        num++;
+    }
+    return 0;
+}
+
+void set(long &num, long &max, int n)
+{
+    if (n == 1)
+    {
+        num = 0;
+        max = 10;
+    }
+    if (n == 2)
+    {
+        num = 10;
+        max = 100;
+    }
+    if (n == 3)
+    {
+        num = 100;
+        max = 1000;
+    }
+    if (n == 4)
+    {
+        num = 1000;
+        max = 10000;
+    }
+    if (n == 5)
+    {
+        num = 10000;
+        max = 100000;
+    }
+    if (n == 6)
+    {
+        num = 100000;
+        max = 1000000;
+    }
+    if (n == 7)
+    {
+        num = 1000000;
+        max = 10000000;
+    }
+    if (n == 8)
+    {
+        num = 10000000;
+        max = 100000000;
+    }
+    if (n == 9)
+    {
+        num = 100000000;
+        max = 1000000000;
+    }
+}

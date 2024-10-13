@@ -1,0 +1,147 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+class Polynomial
+{
+private:
+    int coefficients[100];
+    int pow_of_variable[100];
+    int num_of_coefficients;
+
+public:
+    void getData()
+    {
+        cout << "Enter the number of coeffiecients : ";
+        cin >> num_of_coefficients;
+
+        cout << "\nEnter value of coefficients (coefficients with higher power of variable first) : " << endl;
+        for (int i = 0; i < num_of_coefficients; i++)
+        {
+            cin >> coefficients[i];
+        }
+
+        cout << "\nEnter the power of variables associated with the cooresponding coefficients : " << endl;
+        for (int i = 0; i < num_of_coefficients; i++)
+        {
+            cout << coefficients[i] << " : ";
+            cin >> pow_of_variable[i];
+        }
+        return;
+    }
+
+    void print()
+    {
+        for (int i = 0; i < num_of_coefficients; i++)
+        {
+            cout << coefficients[i] << "x^" << pow_of_variable[i];
+            if (i != num_of_coefficients - 1)
+                cout << " + ";
+        }
+        cout << endl;
+        return;
+    }
+
+    int calculate(int x)
+    {
+        int result = 0;
+        for (int i = 0; i < num_of_coefficients; i++)
+        {
+            result += coefficients[i] * pow(x, pow_of_variable[i]);
+        }
+        return result;
+    }
+};
+
+class Exponential
+{
+private:
+    int base[10];
+    int constant;
+    int num;
+
+public:
+    void getData()
+    {
+        cout << "Enter the number of bases with variable x as their power : ";
+        cin >> num;
+
+        cout << "--- Enter bases ---" << endl;
+        for (int i = 0; i < num; i++)
+        {
+            cin >> base[i];
+        }
+
+        cout << "Enter the constant of the equation (enter 0, if none) : ";
+        cin >> constant;
+        return;
+    }
+
+    void print()
+    {
+        for (int i = 0; i < num; i++)
+        {
+            cout << base[i] << "^x + ";
+        }
+        cout << constant << endl;
+    }
+
+    int evaluate(int x)
+    {
+        int result = 0;
+        for (int i = 0; i < num; i++)
+        {
+            result += pow(base[i], x);
+        }
+        result += constant;
+
+        return result;
+    }
+};
+
+int main()
+{
+    char choice;
+    int x;
+
+    cout << "Is your function a Polynomial or an exponential function?" << endl
+         << "Enter P or E : ";
+    cin >> choice;
+
+    switch (choice)
+    {
+    case 'P':
+        cout << "If there's a constant, input power of variable for it as 0." << endl
+             << "If there's a variable with no coefficient, input coefficient for it as 1." << endl<<endl;
+
+        Polynomial Poly;
+        Poly.getData();
+
+        cout << "The polynomial is : ";
+        Poly.print();
+        
+        cout << "Enter the value of x you want to solve the polynomial for : ";
+        cin >> x;
+        cout << "f(" << x << ") --> " << Poly.calculate(x) << endl;
+        break;
+
+    case 'E':
+        Exponential Ex;
+        Ex.getData();
+
+        cout << "The exponential function is : ";
+        Ex.print();
+             
+        cout << "Enter the value of x you want to solve the exponential function for : ";
+        cin >> x;
+        cout << "f(" << x << ") --> " << Ex.evaluate(x) << endl;
+        break;
+
+    default:
+        cout << "Invalid choice..." << endl;
+        cout << "Exiting..." << endl;
+        break;
+    }
+
+    return 0;
+}

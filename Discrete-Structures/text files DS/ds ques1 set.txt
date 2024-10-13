@@ -1,0 +1,76 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+class Set
+{
+    public:
+    void ismember(int a[],int num,int x)
+    
+    {
+        int flag=0;
+        for(int i=0;i<x;i++)
+        {
+            if(a[i]==num)
+            flag=1;
+            else 
+            continue;
+        }
+        if(flag==1)
+        {
+            cout<<" TRUE";
+        }
+        else
+        {
+            cout<<" FALSE";
+        }
+    }
+
+    void powerset(int a[],int x)
+    {
+        int powersize=pow(2,x);
+        int i,j;
+        cout<<"\n\nTHE POWER SET : "<<endl;
+       
+        for(i=0;i<powersize;i++)
+        {
+            cout << "{";
+            for(j=0;j<x;j++)
+            {
+                if(i & (1<<j))
+                  cout<<a[j]<<',';
+            }
+            if (i)
+            {
+                cout << '\b';
+            }
+             cout << '}' << endl;
+         
+        }
+        return;
+       
+    }
+};
+    
+int main()
+{
+    Set s;
+    int a[10],num,x=0;
+    char c;
+    do
+    {
+    	cout<<"\nENTER ELEMENT OF ARRAY: ";
+        cin>>a[x];
+        ++x;
+        cout<<"Press y to continue,n to end."<<endl;
+        cin>>c;
+    }while(c!='n');
+    
+    cout<<"\nTHE CARDINALITY OF THE SET IS: "<<x<<endl;
+    
+    cout<<"\nENTER ELEMENT TO BE CHECKED: ";
+    cin>>num;
+    s.ismember(a,num,x);
+    s.powerset(a,x);
+    return 0;
+}

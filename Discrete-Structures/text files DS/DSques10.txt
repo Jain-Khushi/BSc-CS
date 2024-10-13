@@ -1,0 +1,81 @@
+#include <iostream>
+using namespace std;
+
+void printArray(int size, int arr[])
+{
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i];
+    }
+    cout << endl;
+    return;
+}
+
+void without_rep(int start, int arr[], int end)
+{
+    if (start == end)
+    {
+        printArray(end + 1, arr);
+        return;
+    }
+
+    for (int i = 0; i <= end; i++)
+    {
+        swap((arr[i]), (arr[start]));
+        without_rep((start + 1), arr, end);
+        swap((arr[i]), (arr[start]));
+    }
+    return;
+}
+
+void with_rep(int start, int arr[], int end)
+{
+    for (int i = 0; i <= end; i++)
+    {
+        for (int j = 0; j <= end; j++)
+        {
+            cout << arr[i];
+        }
+        cout << endl;
+    }
+    without_rep(start, arr, end);
+    return;
+}
+
+int main()
+{
+    int size = 0;
+    cout << "Enter the number of digits in the set : ";
+    cin >> size;
+    int digits[size] = {0};
+
+    cout << "Enter the digits : " << endl;
+    for (int i = 0; i < size; i++)
+    {
+        cin >> digits[i];
+    }
+
+    int start = 0, end = size, choice = 0;
+
+    cout << "Do you want to print Permutations " << endl;
+    cout << "1. With repetition?" << endl;
+    cout << "2. Without repetition?" << endl;
+    cin >> choice;
+    cout<<endl;
+
+    switch (choice)
+    {
+    case 1:
+        with_rep(start, digits, end - 1);
+        break;
+    case 2:
+        without_rep(start, digits, end - 1);
+        break;
+    default:
+        cout << "Invalid Choice" << endl;
+        cout << "Exiting...";
+        break;
+    }
+
+    return 0;
+}

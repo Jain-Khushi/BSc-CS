@@ -1,0 +1,58 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int A[50][50],ver,insum,outsum,ans;
+    
+    cout<<"Enter the number of vertices : ";
+    cin>>ver;
+    cout<<endl;
+    
+    for(int i=1; i<=ver; i++){
+       for(int j=1; j<=ver; j++)
+       {
+           if(i==j){
+               cout<<"Is vertices "<<i<<" have an edge on itself ? Type 1 for yes and 0 for no: ";
+               cin>>ans; 
+                 A[i][j]=ans;
+            }
+            else{
+                 cout<<"How many edges are there from "<<i<<" to "<<j<<" ? ";
+                 cin>>ans;
+                   A[i][j]=ans;
+                 
+            }
+              
+       }
+    }
+    cout<<"\nMatrix Representation\n";
+    for(int i=1; i<=ver; i++){
+       for(int j=1; j<=ver; j++){
+          cout<<A[i][j]<<" ";
+       }
+       cout<<endl;
+    }
+    cout<<endl;
+    
+    for(int j=1; j<=ver; j++){
+       for(int i=1; i<=ver; i++){
+           insum=insum+A[i][j];
+          }
+        cout<<"Indegree of vertex "<<j<<" is "<<insum<<endl;
+        insum=0;
+    }
+    
+    for(int i=1; i<=ver; i++){
+       for(int j=1; j<=ver; j++){
+           outsum =  outsum+A[i][j];
+          }
+        cout<<"Outdegree of vertex "<<i<<" is "<<outsum<<endl;
+        outsum=0;
+    }
+    cout<<endl;
+    
+   
+    return 0;
+    
+}

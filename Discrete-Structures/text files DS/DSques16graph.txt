@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  cout << "\nEnter number of vertices" << endl;
+  int n;
+  cin >> n;
+  int p = 0, x, y, c = 1;
+
+  int a[10][10];
+  int i = 0;
+  for (x = 0; x < n; x++)
+  {
+    i++;
+    cout << "Enter values for vertices " << i <<endl;
+    for (y = 0; y < n; y++)
+    {
+      cin >> a[x][y];
+    }
+  }
+  cout << "\nThe adjacency matrix is" << endl;
+  for (x = 0; x < n; x++)
+  {
+    for (y = 0; y < n; y++)
+    {
+      cout << a[x][y] << " ";
+    }
+    cout << endl;
+  }
+  for (x = 0; x < n; x++)
+  {
+    for (y = 0; y < n; y++)
+    {
+        if((x==y) && a[x][y]==0)
+          p++;
+    }
+  }
+  
+  if(p==n)
+    cout << "\nIt is a complete graph.";
+  else
+    cout << "\nIt is not a complete graph.";
+
+  return 0;
+}

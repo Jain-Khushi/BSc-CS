@@ -1,0 +1,127 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int x[10],y[10],m,i,j;
+	
+	cout<<"Enter the size of x and y : ";
+	cin>>m;
+	
+	cout<<"Enter the truth values of x :\n";
+	for(i=0;i<m;i++)
+	  cin>>x[i];
+	cout<<"Enter the truth values of y :\n";
+	for(j=0;j<m;j++)
+	   cin>>y[j];
+	   
+	//Conjunction
+	cout<<"\nTruth values for CONJUNCTION (x ^ y) :\n";
+	for(i=0,j=0 ; i<m,j<m ; i++,j++)
+	{
+		if(x[i]==1 && y[i]==1) 
+		  cout<<"1  ";
+		else
+		  cout<<"0  ";
+	}
+	cout<<endl;
+	
+	//Disjunction
+	cout<<"\nTruth values for DISJUNCTION (x V y) :\n";
+	for(i=0,j=0 ; i<m,j<m ; i++,j++)
+	{
+		if(x[i]==0 && y[i]==0)
+		  cout<<"0  ";
+		else
+		  cout<<"1  ";
+	}
+	cout<<endl;
+	
+	//Negation
+	cout<<"\nTruth values for NEGATION :\n";
+	cout<<"For x (!x):\n";
+	for(i=0;i<m;i++)
+	{
+		if(x[i]==1)
+		  cout<<"0  ";
+		else
+		  cout<<"1  ";	
+	}
+	cout<<endl;
+	cout<<"For y (!y):\n";
+	for(j=0;j<m;j++)
+	{
+		if(y[j]==1)
+		  cout<<"0  ";
+		else
+		  cout<<"1  ";	
+	}
+	cout<<endl;
+	
+	//Exclusive OR
+	cout<<"\nTruth values for EXCLUSIVE OR  :\n";
+	for(i=0,j=0 ; i<m,j<m ; i++,j++)
+	{
+		if((x[i]==1 && y[i]==1) || (x[i]==0 && y[i]==0))
+		  cout<<"0  ";
+		else
+		  cout<<"1  ";
+	}
+	cout<<endl;
+	
+	//Nand
+	cout<<"\nTruth values for NAND :\n";
+	for(i=0,j=0 ; i<m,j<m ; i++,j++)
+	{
+		if(x[i]==1 && y[i]==1)
+		  cout<<"0  ";
+		else
+		  cout<<"1  ";
+	}
+	cout<<endl;
+	
+	//Nor
+	cout<<"\nTruth values for NOR :\n";
+	for(i=0,j=0 ; i<m,j<m ; i++,j++)
+	{
+		if(x[i]==0 && y[i]==0)
+		  cout<<"1  ";
+		else
+		  cout<<"0  ";
+	}
+	cout<<endl;
+	
+	//Exlusive NOR
+	cout<<"\nTruth values for EXCLUSIVE NOR :\n";
+	for(i=0,j=0 ; i<m,j<m ; i++,j++)
+	{
+		if((x[i]==1 && y[i]==1) || (x[i]==0 && y[i]==0))
+		  cout<<"1  ";
+		else
+		  cout<<"0  ";
+	}
+	cout<<endl;
+	
+	//Conditional
+	cout<<"\nTruth values for CONDITIONAL (x -> y) :\n";
+	for(i=0,j=0 ; i<m,j<m ; i++,j++)
+	{
+		if(x[i]==1 && y[i]==0)
+		  cout<<"0  ";
+		else
+		  cout<<"1  ";
+	}
+	cout<<endl;
+	
+	//Bi conditional
+	cout<<"\nTruth values for BI CONDITIONAL (x <-> y):\n";
+	for(i=0,j=0 ; i<m,j<m ; i++,j++)
+	{
+		if((x[i]==1 && y[i]==1) || (x[i]==0 && y[i]==0))
+		  cout<<"1  ";
+		else
+		  cout<<"0  ";
+	}
+	cout<<endl;
+	
+ } 
