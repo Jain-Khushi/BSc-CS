@@ -1,0 +1,5 @@
+Ques 15 from guildlines :
+
+Define a class Student to store his/her name and marks in three subjects.
+Use a class variable to store the maximum average marks of the class.Use
+constructor and destructor to initialize and destroy the objects.

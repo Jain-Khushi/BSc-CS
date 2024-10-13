@@ -1,0 +1,6 @@
+l=input("Enter the list : ")
+list1=l.split()
+list1.remove(list1[5])
+list1.remove(list1[4])
+list1.remove(list1[0])
+print("Output :",list1)

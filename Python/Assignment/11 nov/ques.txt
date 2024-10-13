@@ -1,0 +1,5 @@
+1) Implement linear and binary search (recursive)
+2) Implement bubble sort (recursive)
+3) Implement selection sort (iterative and recursive)
+4) Implement insertion sort (iterative and recursive)
+5) Ques 11 from guidelines (Use above implemented functions)
