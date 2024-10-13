@@ -1,0 +1,3 @@
+*WAP where parent creates a child process using fork system call. Use Wait system call in parent
+
+*WAP to display the value of argc and argv

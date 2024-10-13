@@ -1,0 +1,3 @@
+Write a program to create 2 threads....one thread will calculate sum of squares till number 'n'
+
+Second thread will calculate product of first 'n' natural numbers.

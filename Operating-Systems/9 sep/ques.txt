@@ -1,0 +1,2 @@
+1.WAP to create a child process. Child and parent execute same program same code
+2.WAP to create a child process. parent and child execute same program, different code.

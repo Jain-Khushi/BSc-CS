@@ -1,0 +1,5 @@
+*WAP to create child process.
+Child and parent execute different program (use exec)
+
+*WAP to create a thread in your program. Assign a function to calculate sum of first n natural numbers till n.
+'n' will be given on command line or entered by user.

@@ -1,0 +1,15 @@
+1. Shortest job first - non preemptive
+With no arrival time
+for 5 processes
+
+2.WAP to implement shortest remaining time first
+Pre-emptive
+5 processes
+with arrival time
+
+3.WAP to implement round robind scheduling
+5 processes
+time quantum 2 sec
+no arrival time
+Show waiting time for each process, turn around 
+time for each process, average waiting time, average turnaround time

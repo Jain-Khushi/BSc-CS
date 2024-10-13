@@ -1,0 +1,4 @@
+*WAP with 3 consecutive fork system call.
+Use getpid, getppid to print the tree
+
+*WAP to create child process.... parent and child execute different program
